@@ -1,10 +1,14 @@
 function binaryToDecimal(binary) {
-    let binaryarray = binary.split('').reverse();
-  let decimal = 0;
-   for (let i = 0; i < binaryarray.length; i++) {
-    decimal = decimal+ parseInt(binaryarray[i]) * 2 ** i;
-  return decimal;
+    while(binary>0){
+        var decimalNumber = 0;
+        var i = 0;
+        var result =binary%10;
+        console.log(result);
+        binary = Math.floor(binary/10);
+        decimalNumber = decimalNumber+result*2**i;
+        i++;
+    }
+    return decimalNumber;
 }
-}
-var decimalResult = binaryToDecimal('1010');
-console.log(`the decimal number of 1010 is ${decimalResult}`);
+var Decimal = binaryToDecimal(1111);
+console.log(`the decimal number of ${binary} is ${Decimal}`);
